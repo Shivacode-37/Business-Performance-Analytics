@@ -1,0 +1,4 @@
+-- Day 2: Business Performance & Profitability Analysis
+-- Database: superstore
+-- Table: orders
+-- Objective: Identify revenue drivers, profit leakage, and discount impact
