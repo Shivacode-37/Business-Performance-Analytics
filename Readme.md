@@ -1,38 +1,48 @@
+
 # 📊 Business Performance & Profitability Analytics
+
+### *(Superstore Profit Leakage Analysis)*
+
+---
 
 ## 📌 Project Overview
 
 This project delivers an **end-to-end business analytics solution** to analyze sales performance, profitability drivers, and discount impact using real-world retail transactional data.
 
-The objective is to identify  **profit leakage** ,  **high-value segments** , and **actionable insights** that support data-driven decision-making.
+The primary objective is to identify  **profit leakage** ,  **loss-making orders** , and  **discount-driven margin erosion** , and translate these findings into  **actionable business recommendations** .
 
-The project simulates the work of a  **professional Data Analyst** , covering data cleaning, feature engineering, SQL analysis, and business visualization.
+The project simulates the work of a  **professional Data Analyst** , covering:
+
+* Data cleaning & feature engineering
+* SQL-based business analysis
+* Executive-level Power BI dashboarding
 
 ---
 
 ## 🎯 Business Problem
 
-Organizations often generate high revenue but still struggle with **declining profitability** due to:
+Many organizations generate strong revenue but still struggle with **declining profitability** due to:
 
 * Aggressive discounting
-* Loss-making products
-* Inefficient regional or customer strategies
+* Loss-making orders hidden inside high sales volume
+* Poor visibility into profit leakage drivers
 
-This project aims to answer key business questions such as:
+This project answers key business questions:
 
-* Which products generate revenue but lose money?
-* How do discounts impact profitability?
-* Where is profit leakage happening?
-* Which customers and regions drive the most value?
+* Why is profitability low despite high revenue?
+* Which orders are loss-making?
+* How do discounts impact profit?
+* Where is profit leakage concentrated?
+* Which categories require immediate corrective action?
 
 ---
 
 ## 🧰 Tech Stack
 
-* **Python** (Pandas, NumPy) – Data cleaning & feature engineering
-* **SQL** – Business analysis using joins, CTEs, and window functions
-* **Power BI** – Interactive dashboards & executive reporting
-* **Git & GitHub** – Version control and project documentation
+* **Python (Pandas, NumPy)** – Data cleaning & feature engineering
+* **SQL (MySQL)** – KPI calculation and business analysis
+* **Power BI** – Executive dashboards & visual storytelling
+* **Git & GitHub** – Version control & portfolio hosting
 
 ---
 
@@ -43,8 +53,8 @@ Retail transactional sales data containing:
 * Orders
 * Customers
 * Products
-* Regions & markets
-* Discounts & profitability metrics
+* Categories & regions
+* Discounts, sales, and profit metrics
 
 Raw data is treated as **source-of-truth** and never modified directly.
 
@@ -52,25 +62,26 @@ Raw data is treated as **source-of-truth** and never modified directly.
 
 ## 🏗️ Project Architecture
 
-<pre class="overflow-visible! px-0!" data-start="1954" data-end="2352"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(--spacing(9)+var(--header-height))] @w-xl/main:top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span><span>business</span><span>-</span><span>performance</span><span>-</span><span>analytics</span><span>/</span><span>
+<pre class="overflow-visible! px-0!" data-start="2042" data-end="2481"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(--spacing(9)+var(--header-height))] @w-xl/main:top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span><span>business-performance-analytics/
 │
-├── data</span><span>/</span><span>
-│   ├── raw</span><span>/</span><span>
+├── data/
+│   ├── raw/
 │   │   └── superstore_raw.csv
-│   └── processed</span><span>/</span><span>
+│   └── processed/
 │       └── superstore_cleaned.csv
 │
-├── notebooks</span><span>/</span><span>
+├── notebooks/
 │   └── </span><span>01</span><span>_data_cleaning_and_feature_engineering.ipynb
 │
-├── </span><span>sql</span><span>/</span><span>
-│   └── (</span><span>SQL</span><span> analysis queries)
+├── </span><span>sql</span><span>/
+│   └── business_analysis.</span><span>sql</span><span>
 │
-├── powerbi</span><span>/</span><span>
-│   └── (</span><span>dashboard)
+├── powerbi/
+│   └── Superstore_Profit_Leakage.pbix
 │
-├── reports</span><span>/</span><span>
-│   └── (Business insights summary)
+├── screenshots/
+│   ├── executive_overview.png
+│   └── profit_leakage_analysis.png
 │
 ├── README.md
 └── requirements.txt
@@ -80,60 +91,94 @@ Raw data is treated as **source-of-truth** and never modified directly.
 
 ## 🔄 Project Workflow
 
-### Data Preparation & Feature Engineering
+### 1️⃣ Data Preparation & Feature Engineering
 
 * Loaded and inspected raw sales data
 * Standardized column naming for SQL & BI compatibility
 * Validated data types and data quality
-* Engineered key business metrics:
-  * Revenue
+* Engineered key business features:
   * Profit margin
-  * Discount amount
   * Loss-making flag
   * High-discount flag
   * Time-based features
 * Generated a clean, analysis-ready dataset
 
-### SQL Business Analysis *(In Progress)*
+---
 
-* Advanced SQL analysis using:
-  * Joins
-  * CTEs
-  * Window functions
-* Profit leakage identification
-* Discount vs profitability analysis
-* Customer and regional performance analysis
+### 2️⃣ SQL Business Analysis *(Completed)*
 
-### Power BI Dashboard *(Planned)*
+* Calculated core KPIs:
+  * Total Revenue
+  * Total Profit
+  * Profit Margin %
+  * Total Orders
+* Identified loss-making orders
+* Analyzed discount impact on profitability
+* Segmented losses by category and discount bucket
 
-* Executive-level KPIs
-* Product, customer, and regional insights
-* Discount impact visualization
-* Business-ready dashboard storytelling
+---
+
+### 3️⃣ Power BI Dashboard *(Completed)*
+
+The Power BI dashboard is designed for **executive decision-making** and  **root-cause analysis** .
+
+#### 📄 Dashboard Pages
+
+### 1️⃣ Executive Overview
+
+High-level business performance snapshot:
+
+* Total Revenue, Profit, Profit Margin %, Orders
+* Revenue & Profit by Category
+* Loss-Making vs Profitable Orders
+
+📸 Preview:
+
+---
+
+### 2️⃣ Profit Leakage Analysis
+
+Deep-dive analysis to identify root causes:
+
+* Loss-Making Orders & Loss %
+* Discount vs Profit (Order-level leakage pattern)
+* High Discount Orders & Loss Impact
+* Loss Concentration by Category
+
+📸 Preview:
 
 ---
 
 ## 📈 Key Metrics Created
 
-* **Revenue**
-* **Profit Margin**
-* **Discount Amount**
-* **Loss-Making Indicator**
-* **High Discount Indicator**
-* **Monthly & Yearly Trends**
+* Revenue
+* Profit
+* Profit Margin %
+* Total Orders
+* Loss-Making Orders
+* Loss Order %
+* High Discount Indicator
 
 These metrics enable  **decision-oriented analysis** , not just reporting.
 
 ---
 
-## 📌 Key Insights (Preview)
+## 📌 Key Insights
 
-* A significant portion of transactions are **loss-making despite high discounts**
-* Certain products generate high sales volume but low profitability
-* Discounts are not uniformly effective across products and regions
-* Profit leakage can be traced to specific segments and markets
+* ~24% of total orders are **loss-making**
+* **High discounts strongly correlate with negative profit**
+* Loss-making orders cluster beyond a critical discount threshold
+* **Office Supplies** contributes the highest volume of loss-making orders
+* Profit leakage is driven primarily by pricing and discount strategy
 
-*(Detailed insights will be added after SQL & Power BI analysis.)*
+---
+
+## ✅ Business Recommendations
+
+* Introduce **discount caps** for low-margin products
+* Review pricing strategy for high-loss categories
+* Flag high-risk orders using discount and margin thresholds
+* Monitor loss-making orders as a core KPI
 
 ---
 
@@ -141,16 +186,17 @@ These metrics enable  **decision-oriented analysis** , not just reporting.
 
 This project demonstrates:
 
-* Strong **data cleaning and preparation skills**
-* Ability to think in  **business terms** , not just code
-* End-to-end ownership of an analytics solution
-* Readiness for **Data Analyst roles with 2+ years experience**
+* End-to-end ownership of a business analytics problem
+* Strong SQL-based business reasoning
+* Executive-level Power BI dashboard design
+* Ability to convert data into **actionable business decisions**
+* Readiness for **Data Analyst / Business Analyst roles (2+ years experience)**
 
 ---
 
 ## 📬 Author
 
-Mohit Kumar
+**Mohit Kumar**
 
 Data Analyst | SQL | Python | Power BI
 
@@ -158,4 +204,4 @@ Data Analyst | SQL | Python | Power BI
 
 ## 🔖 Note
 
-This project is built with a  **3-day execution mindset** , simulating real-world analytics delivery under tight deadlines
+This project was executed with a  **3-day delivery mindset** , simulating real-world analytics delivery under tight deadlines.
