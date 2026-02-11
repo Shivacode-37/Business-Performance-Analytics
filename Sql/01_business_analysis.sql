@@ -6,12 +6,7 @@
 
 -- Overall Business KPIs
 
-SELECT
-    COUNT(*) AS total_orders,
-    ROUND(SUM(sales), 2) AS total_revenue,
-    ROUND(SUM(profit), 2) AS total_profit,
-    ROUND(SUM(profit) / SUM(sales) * 100, 2) AS overall_profit_margin_pct
-FROM orders;
+
 
 -- Observation:
 -- The business generated 12.64M in revenue from 51,290 orders with an

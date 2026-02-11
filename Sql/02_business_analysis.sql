@@ -126,3 +126,5 @@ ORDER BY total_revenue DESC;
 -- Observation:
 -- Several high-revenue products are loss-making, indicating hidden profit leakage
 -- where sales volume does not translate into profitability.
+
+select * from Orders;
